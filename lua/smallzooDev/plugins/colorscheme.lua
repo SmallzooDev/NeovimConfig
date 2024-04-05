@@ -1,9 +1,6 @@
 return {
 	"nordtheme/vim",
 	config = function()
-		-- Assuming nord.nvim allows for similar customization, you would adjust here
-		-- If nord.nvim does not require or allow for such detailed color adjustments,
-		-- simply set the colorscheme
 		vim.cmd([[colorscheme nord]])
 		vim.cmd([[hi Normal guibg=NONE]])
 		vim.cmd([[hi SignColumn guibg=NONE]])
