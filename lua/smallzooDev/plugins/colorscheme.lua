@@ -1,5 +1,5 @@
 return {
-	"shaunsingh/nord.nvim",
+	"nordtheme/vim",
 	config = function()
 		-- Assuming nord.nvim allows for similar customization, you would adjust here
 		-- If nord.nvim does not require or allow for such detailed color adjustments,
