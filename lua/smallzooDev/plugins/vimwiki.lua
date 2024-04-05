@@ -13,7 +13,6 @@ return {
 			{
 				path = "/Users/joonkyu_kang/wiki/SmallzooDevWiki/content/_wiki",
 				ext = ".md",
-				syntax = "markdown",
 				index = "home",
 			},
 			{
