@@ -19,6 +19,8 @@ return {
 
 		-- Set menu
 		dashboard.section.buttons.val = {
+			dashboard.button("1", "  VimWiki Public", ":VimwikiIndex 1 <CR>"),
+			dashboard.button("2", "  VimWiki Private", ":VimwikiIndex 2 <CR>"),
 			dashboard.button("e", "  > New File", "<cmd>ene<CR>"),
 			dashboard.button("SPC ee", "  > Toggle file explorer", "<cmd>NvimTreeToggle<CR>"),
 			dashboard.button("SPC ff", "󰱼 > Find File", "<cmd>Telescope find_files<CR>"),
