@@ -36,6 +36,7 @@ return {
 				"emmet_ls",
 				"pyright",
 				"rust_analyzer",
+				"clangd",
 			},
 		})
 
@@ -47,6 +48,8 @@ return {
 				"black", -- python formatter
 				"pylint",
 				"eslint_d",
+				"clang-format",
+				"codelldb",
 			},
 		})
 	end,
