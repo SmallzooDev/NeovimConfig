@@ -50,6 +50,7 @@ return {
     call add(l:template, 'categories: ')
     call add(l:template, 'description: ')
     call add(l:template, 'showToc: true')
+    call add(l:template, 'tocOpen: true')
     call add(l:template, '---')
     call add(l:template, '')
     call add(l:template, '# ')
