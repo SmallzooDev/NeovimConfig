@@ -40,14 +40,14 @@ local function map_no_clipboard(lhs)
 	vim.api.nvim_set_keymap(
 		"n",
 		lhs,
-		[[:lua vim.o.clipboard = ''; vim.cmd('normal! ]] .. lhs .. [['); vim.o.clipboard = 'unnamedplus'<CR>]],
+		":lua vim.o.clipboard = ''; vim.cmd([[normal! " .. lhs .. "]]); vim.o.clipboard = 'unnamedplus'<CR>",
 		{ noremap = true, silent = true }
 	)
 end
 
 map_no_clipboard("ciw")
-map_no_clipboard('ci"')
-map_no_clipboard("ci'")
+map_no_clipboard([[ci"]])
+map_no_clipboard([[ci']])
 map_no_clipboard("ci`")
 map_no_clipboard("ci(")
 map_no_clipboard("ci{")
