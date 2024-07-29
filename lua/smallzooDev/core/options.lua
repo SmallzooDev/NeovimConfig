@@ -36,6 +36,23 @@ opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or 
 -- clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
+local function map_no_clipboard(lhs)
+	vim.api.nvim_set_keymap(
+		"n",
+		lhs,
+		[[:lua vim.o.clipboard = ''; vim.cmd('normal! ]] .. lhs .. [['); vim.o.clipboard = 'unnamedplus'<CR>]],
+		{ noremap = true, silent = true }
+	)
+end
+
+map_no_clipboard("ciw")
+map_no_clipboard('ci"')
+map_no_clipboard("ci'")
+map_no_clipboard("ci`")
+map_no_clipboard("ci(")
+map_no_clipboard("ci{")
+map_no_clipboard("ci[")
+
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
