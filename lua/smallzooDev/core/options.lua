@@ -40,7 +40,9 @@ local function map_no_clipboard(lhs)
 	vim.api.nvim_set_keymap(
 		"n",
 		lhs,
-		":lua vim.o.clipboard = ''; vim.cmd([[normal! " .. lhs .. "]]); vim.o.clipboard = 'unnamedplus'<CR>",
+		":lua vim.o.clipboard = ''; vim.cmd('normal! "
+			.. lhs
+			.. "'); vim.api.nvim_feedkeys('i', 'n', false); vim.o.clipboard = 'unnamedplus'<CR>",
 		{ noremap = true, silent = true }
 	)
 end
