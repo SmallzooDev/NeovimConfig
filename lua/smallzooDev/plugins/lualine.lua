@@ -4,18 +4,16 @@ return {
 	config = function()
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
-
 		local colors = {
-			blue = "#65D1FF",
-			green = "#3EFFDC",
-			violet = "#FF61EF",
-			yellow = "#FFDA7B",
-			red = "#FF4A4A",
-			fg = "#c3ccdc",
-			bg = "#112638",
-			inactive_bg = "#2c3043",
+			blue = "#81A1C1", -- Nord frost
+			green = "#A3BE8C", -- Nord aurora green
+			violet = "#B48EAD", -- Nord aurora purple
+			yellow = "#EBCB8B", -- Nord aurora yellow
+			red = "#BF616A", -- Nord aurora red
+			fg = "#D8DEE9", -- Nord snow storm 3
+			bg = "#2E3440", -- Nord polar night 0
+			inactive_bg = "#3B4252", -- Nord polar night 1
 		}
-
 		local my_lualine_theme = {
 			normal = {
 				a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
@@ -48,7 +46,6 @@ return {
 				c = { bg = colors.inactive_bg, fg = colors.semilightgray },
 			},
 		}
-
 		-- configure lualine with modified theme
 		lualine.setup({
 			options = {
