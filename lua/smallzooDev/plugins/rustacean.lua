@@ -10,9 +10,10 @@ return {
 			local extension_path = codelldb:get_install_path() .. "/extension/"
 			local codelldb_path = extension_path .. "adapter/codelldb"
 			local liblldb_path = extension_path .. "lldb/lib/liblldb.dylib"
-
+			local map = vim.api.nvim_set_keymap
 			local cfg = require("rustaceanvim.config")
 
+			map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
 			vim.g.rustaceanvim = {
 				dap = {
 					adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
