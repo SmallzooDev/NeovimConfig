@@ -27,3 +27,12 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+
+-- <C-m> mappings
+keymap.set("n", "<C-m>", ":", { noremap = true })
+keymap.set("v", "<C-m>", ":", { noremap = true })
+keymap.set("i", "<C-m>", "<CR>", { noremap = true })
+keymap.set("c", "<C-m>", "<CR>", { noremap = true })
+
+keymap.set("n", "<Tab>", "<Nop>", { noremap = true })
+keymap.set("v", "<Tab>", "<Nop>", { noremap = true })
